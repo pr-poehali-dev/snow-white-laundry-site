@@ -52,7 +52,7 @@ export default function Index() {
             <img
               src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/bucket/deea3ea2-f5a5-42fb-ad53-5cba9ea73273.jpg"
               alt="Белоснежка"
-              className="h-full w-auto object-contain drop-shadow-xl"
+              className="h-full w-auto object-contain drop-shadow-xl mix-blend-multiply"
             />
           </a>
           <a href="#home" className="flex items-center gap-3 ml-24 md:ml-32">
