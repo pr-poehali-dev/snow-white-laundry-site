@@ -50,7 +50,7 @@ export default function Index() {
         <div className="container flex items-center justify-between h-24">
           <a href="#home" className="flex items-center gap-3">
             <img
-              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/files/90e197c6-840b-4914-afa0-f0e9befbc530.jpg"
+              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/files/1155a815-145f-4d88-8e2b-c281a93c6b3f.jpg"
               alt="Белоснежка"
               className="rounded-xl object-cover shrink-0"
               style={{ width: 46, height: 120 }}
