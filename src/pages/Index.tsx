@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Icon from '@/components/ui/icon';
-import WhiteBgImage from '@/components/WhiteBgImage';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -50,8 +49,8 @@ export default function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-white/80 border-b border-border">
         <div className="container relative flex items-center justify-between h-24">
           <a href="#home" className="absolute top-0 left-2 md:left-8 h-[150px] md:h-[210px] z-10 pointer-events-auto">
-            <WhiteBgImage
-              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/bucket/ddeb1680-8dbb-43e1-a0ce-4a7cde074998.png"
+            <img
+              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/bucket/4d99dc49-dba2-4567-b84a-3d94b2ad5a25.png"
               alt="Белоснежка"
               className="h-full w-auto object-contain drop-shadow-xl"
             />
