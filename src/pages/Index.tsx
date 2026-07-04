@@ -51,7 +51,7 @@ export default function Index() {
         <div className="container relative flex items-center justify-between h-24">
           <a href="#home" className="absolute top-0 left-2 md:left-8 h-[150px] md:h-[210px] z-10 pointer-events-auto">
             <WhiteBgImage
-              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/bucket/deea3ea2-f5a5-42fb-ad53-5cba9ea73273.jpg"
+              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/bucket/ddeb1680-8dbb-43e1-a0ce-4a7cde074998.png"
               alt="Белоснежка"
               className="h-full w-auto object-contain drop-shadow-xl"
             />
