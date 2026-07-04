@@ -47,11 +47,14 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-white/80 border-b border-border">
-        <div className="container flex items-center justify-between h-16 md:h-20">
-          <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-2xl bg-primary flex items-center justify-center">
-              <Icon name="Snowflake" className="text-white" size={22} />
-            </div>
+        <div className="container flex items-center justify-between h-24">
+          <a href="#home" className="flex items-center gap-3">
+            <img
+              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/files/90e197c6-840b-4914-afa0-f0e9befbc530.jpg"
+              alt="Белоснежка"
+              className="rounded-xl object-cover shrink-0"
+              style={{ width: 46, height: 120 }}
+            />
             <span className="font-display font-extrabold text-xl tracking-tight text-secondary-foreground">
               Белоснежка
             </span>
