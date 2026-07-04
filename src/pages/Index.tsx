@@ -47,14 +47,15 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-white/80 border-b border-border">
-        <div className="container flex items-center justify-between h-24">
-          <a href="#home" className="flex items-center gap-3">
+        <div className="container relative flex items-center justify-between h-24">
+          <a href="#home" className="absolute top-0 left-2 md:left-8 h-[150px] md:h-[210px] z-10 pointer-events-auto">
             <img
-              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/files/1155a815-145f-4d88-8e2b-c281a93c6b3f.jpg"
+              src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/bucket/deea3ea2-f5a5-42fb-ad53-5cba9ea73273.jpg"
               alt="Белоснежка"
-              className="rounded-xl object-cover shrink-0"
-              style={{ width: 46, height: 120 }}
+              className="h-full w-auto object-contain drop-shadow-xl"
             />
+          </a>
+          <a href="#home" className="flex items-center gap-3 ml-24 md:ml-32">
             <span className="font-display font-extrabold text-xl tracking-tight text-secondary-foreground">
               Белоснежка
             </span>
