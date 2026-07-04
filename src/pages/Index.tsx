@@ -107,7 +107,7 @@ export default function Index() {
       </header>
 
       {/* Hero */}
-      <section id="home" className="relative pt-28 md:pt-40 pb-20 md:pb-28 overflow-hidden bg-mesh">
+      <section id="home" className="relative pt-28 md:pt-40 pb-20 md:pb-28 overflow-hidden bg-mesh scroll-mt-[160px] md:scroll-mt-[220px]">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-6">
@@ -154,7 +154,7 @@ export default function Index() {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-20 md:py-28 container">
+      <section id="services" className="py-20 md:py-28 container scroll-mt-[160px] md:scroll-mt-[220px]">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <h2 className="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-secondary-foreground">
             Наши услуги
@@ -180,7 +180,7 @@ export default function Index() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-20 md:py-28 bg-secondary">
+      <section id="about" className="py-20 md:py-28 bg-secondary scroll-mt-[160px] md:scroll-mt-[220px]">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-secondary-foreground">
@@ -224,7 +224,7 @@ export default function Index() {
       </section>
 
       {/* Prices */}
-      <section id="prices" className="py-20 md:py-28 container">
+      <section id="prices" className="py-20 md:py-28 container scroll-mt-[160px] md:scroll-mt-[220px]">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <h2 className="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-secondary-foreground">
             Цены
@@ -250,7 +250,7 @@ export default function Index() {
       </section>
 
       {/* Reviews */}
-      <section id="reviews" className="py-20 md:py-28 bg-secondary">
+      <section id="reviews" className="py-20 md:py-28 bg-secondary scroll-mt-[160px] md:scroll-mt-[220px]">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-secondary-foreground">
@@ -278,9 +278,9 @@ export default function Index() {
       </section>
 
       {/* Order + Contacts */}
-      <section id="order" className="py-20 md:py-28 container">
+      <section id="order" className="py-20 md:py-28 container scroll-mt-[160px] md:scroll-mt-[220px]">
         <div className="grid lg:grid-cols-2 gap-12">
-          <div id="contacts">
+          <div id="contacts" className="scroll-mt-[160px] md:scroll-mt-[220px]">
             <h2 className="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-secondary-foreground">
               Заказ онлайн
             </h2>
