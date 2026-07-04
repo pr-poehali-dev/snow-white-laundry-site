@@ -56,9 +56,7 @@ export default function Index() {
             />
           </a>
           <a href="#home" className="flex items-center gap-3 ml-24 md:ml-32">
-            <span className="font-display font-extrabold text-xl tracking-tight text-secondary-foreground">
-              Белоснежка
-            </span>
+            <span className="font-display font-extrabold tracking-tight text-3xl text-cyan-300">"БЕЛОСНЕЖКА"</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
