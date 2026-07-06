@@ -3,6 +3,8 @@ import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import func2url from '../../backend/func2url.json';
 
 const HERO_IMG =
   'https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/files/324a8d97-703d-402a-8f11-d65554d032d1.jpg';
@@ -28,6 +30,36 @@ const services = [
 
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [orderName, setOrderName] = useState('');
+  const [orderPhone, setOrderPhone] = useState('');
+  const [orderComment, setOrderComment] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleOrderSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!orderName.trim() || !orderPhone.trim()) {
+      toast({ title: 'Заполните имя и телефон', variant: 'destructive' });
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const res = await fetch(func2url['submit-order'], {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: orderName, phone: orderPhone, comment: orderComment }),
+      });
+      if (!res.ok) throw new Error('Request failed');
+      toast({ title: 'Заявка отправлена!', description: 'Мы скоро с вами свяжемся.' });
+      setOrderName('');
+      setOrderPhone('');
+      setOrderComment('');
+    } catch {
+      toast({ title: 'Не удалось отправить заявку', description: 'Попробуйте ещё раз позже.', variant: 'destructive' });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -332,22 +364,37 @@ export default function Index() {
 
           <form
             className="p-8 rounded-3xl bg-secondary border border-border space-y-4"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleOrderSubmit}
           >
             <div>
               <label className="text-sm font-medium text-secondary-foreground mb-1.5 block">Ваше имя</label>
-              <Input placeholder="Как к вам обращаться?" className="rounded-xl bg-white h-12" />
+              <Input
+                placeholder="Как к вам обращаться?"
+                className="rounded-xl bg-white h-12"
+                value={orderName}
+                onChange={(e) => setOrderName(e.target.value)}
+              />
             </div>
             <div>
               <label className="text-sm font-medium text-secondary-foreground mb-1.5 block">Телефон</label>
-              <Input placeholder="+7 (___) ___-__-__" className="rounded-xl bg-white h-12" />
+              <Input
+                placeholder="+7 (___) ___-__-__"
+                className="rounded-xl bg-white h-12"
+                value={orderPhone}
+                onChange={(e) => setOrderPhone(e.target.value)}
+              />
             </div>
             <div>
               <label className="text-sm font-medium text-secondary-foreground mb-1.5 block">Комментарий</label>
-              <Textarea placeholder="Что нужно постирать и когда забрать?" className="rounded-xl bg-white min-h-28" />
+              <Textarea
+                placeholder="Что нужно постирать и когда забрать?"
+                className="rounded-xl bg-white min-h-28"
+                value={orderComment}
+                onChange={(e) => setOrderComment(e.target.value)}
+              />
             </div>
-            <Button type="submit" size="lg" className="w-full rounded-xl text-base">
-              Отправить заявку
+            <Button type="submit" size="lg" className="w-full rounded-xl text-base" disabled={submitting}>
+              {submitting ? 'Отправляем...' : 'Отправить заявку'}
             </Button>
             <p className="text-xs text-muted-foreground text-center">
               Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
