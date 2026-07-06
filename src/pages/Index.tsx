@@ -26,12 +26,13 @@ const services = [
 ];
 
 const prices = [
-  { name: 'Постельное бельё (комплект)', price: '350 ₽' },
-  { name: 'Стирка белья, 1 кг', price: '120 ₽' },
-  { name: 'Скатерти и салфетки, 1 кг', price: '190 ₽' },
-  { name: 'Медицинский текстиль, 1 кг', price: '160 ₽' },
-  { name: 'Глажка, 1 кг', price: '90 ₽' },
-  { name: 'Доставка по городу', price: 'от 200 ₽' },
+  { name: 'Стирка белья, до 4 кг', price: '900 ₽' },
+  { name: 'Стирка белья, свыше 4 кг', price: '225 ₽/кг' },
+  { name: 'Стирка с крахмалом, до 4 кг', price: '1200 ₽' },
+  { name: 'Стирка с крахмалом, свыше 4 кг', price: '300 ₽/кг' },
+  { name: 'Гардины, тюль, шторы, 1 кг', price: '650 ₽' },
+  { name: 'Спецодежда без глажки, 1 кг', price: '300 ₽' },
+  { name: 'Спецодежда с глажкой, 1 кг', price: '550 ₽' },
 ];
 
 const reviews = [
@@ -242,7 +243,10 @@ export default function Index() {
             </div>
           ))}
         </div>
-        <p className="text-center text-muted-foreground mt-6">
+        <p className="text-center font-display font-bold text-secondary-foreground mt-6 text-lg">
+          Надбавка за сложность + 30%
+        </p>
+        <p className="text-center text-muted-foreground mt-2">
           Для организаций действуют специальные условия — уточняйте при заказе.
         </p>
       </section>
