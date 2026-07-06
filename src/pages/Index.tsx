@@ -318,6 +318,16 @@ export default function Index() {
                 </div>
               ))}
             </div>
+            <div className="mt-6 rounded-3xl overflow-hidden border border-border">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?text=Луганская%20Народная%20Республика%2C%20Антрацитовский%20район%2C%20Антрацит%2C%20улица%20Смирнова%2C%2015%D0%90"
+                width="100%"
+                height="280"
+                frameBorder="0"
+                title="Схема проезда"
+                className="w-full"
+              />
+            </div>
           </div>
 
           <form
