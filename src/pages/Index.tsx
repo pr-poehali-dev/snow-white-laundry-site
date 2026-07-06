@@ -12,7 +12,6 @@ const nav = [
   { label: 'Услуги', href: '#services' },
   { label: 'О нас', href: '#about' },
   { label: 'Цены', href: '#prices' },
-  { label: 'Отзывы', href: '#reviews' },
   { label: 'Контакты', href: '#contacts' },
 ];
 
@@ -26,12 +25,6 @@ const services = [
 ];
 
 
-
-const reviews = [
-  { name: 'Мария Л.', role: 'Постоянный клиент', text: 'Бельё возвращают идеально чистым и приятно пахнущим. Доставка всегда вовремя!' },
-  { name: 'Кафе «Уют»', role: 'Партнёр', text: 'Работаем уже год — скатерти и униформа безупречны. Рекомендуем как надёжного партнёра.' },
-  { name: 'Городская больница №3', role: 'Организация', text: 'Соблюдают все санитарные нормы, объёмы обрабатывают быстро. Спасибо за качество!' },
-];
 
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -298,34 +291,6 @@ export default function Index() {
         <p className="text-center text-muted-foreground mt-2">
           Для организаций действуют специальные условия — уточняйте при заказе.
         </p>
-      </section>
-
-      {/* Reviews */}
-      <section id="reviews" className="py-20 md:py-28 bg-secondary">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <h2 className="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-secondary-foreground">
-              Отзывы
-            </h2>
-            <p className="mt-4 text-muted-foreground text-lg">Нам доверяют семьи и компании</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <div key={r.name} className="p-8 rounded-3xl bg-white border border-border">
-                <div className="flex gap-1 mb-4 text-primary">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Icon key={i} name="Star" size={18} fill="currentColor" />
-                  ))}
-                </div>
-                <p className="text-secondary-foreground mb-6">«{r.text}»</p>
-                <div>
-                  <div className="font-display font-bold text-secondary-foreground">{r.name}</div>
-                  <div className="text-sm text-muted-foreground">{r.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Order + Contacts */}
