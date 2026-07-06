@@ -306,7 +306,7 @@ export default function Index() {
             <div className="mt-8 space-y-5">
               {[
                 { icon: 'Phone', t: '+7 (959) 136-80-53' },
-                { icon: 'Mail', t: 'hello@белоснежка.рус' },
+                { icon: 'Mail', t: 'irinka-0909@mail.ru' },
                 { icon: 'MapPin', t: 'ЛНР, м.о. Антрацитовский, г.Антрацит, ул.Смиронова, д. 15 А' },
                 { icon: 'Clock', t: 'С понедельника по пятницу с 8:00 до 16:00' },
               ].map((c) => (
