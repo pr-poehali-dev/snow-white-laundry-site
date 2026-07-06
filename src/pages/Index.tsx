@@ -186,7 +186,6 @@ export default function Index() {
                 'Экологичные и гипоаллергенные средства',
                 'Дезинфекция для медицинских учреждений',
                 'Договоры и документы для организаций',
-                'Бесплатная доставка при заказе от 3000 ₽',
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3">
                   <Icon name="CircleCheck" className="text-primary mt-0.5 shrink-0" size={22} />
