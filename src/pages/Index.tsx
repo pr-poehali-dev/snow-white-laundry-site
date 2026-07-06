@@ -308,7 +308,7 @@ export default function Index() {
                 { icon: 'Phone', t: '+7 (900) 000-00-00' },
                 { icon: 'Mail', t: 'hello@белоснежка.рус' },
                 { icon: 'MapPin', t: 'г. Москва, ул. Чистая, 1' },
-                { icon: 'Clock', t: 'Ежедневно 8:00 — 21:00' },
+                { icon: 'Clock', t: 'С понедельника по пятницу с 8:00 до 16:00' },
               ].map((c) => (
                 <div key={c.t} className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-2xl bg-accent flex items-center justify-center shrink-0">
