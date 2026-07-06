@@ -49,7 +49,7 @@ export default function Index() {
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-white/80 border-b border-border">
         <div className="container relative flex items-center justify-between h-24">
-          <a href="#home" className="absolute top-0 left-2 md:left-8 h-[150px] md:h-[210px] z-10 pointer-events-auto">
+          <a href="#home" className="absolute top-0 left-2 md:left-8 h-[113px] md:h-[158px] z-10 pointer-events-auto">
             <img
               src="https://cdn.poehali.dev/projects/3a749f47-e4bb-4bb2-bfdd-eea651eef4ec/bucket/1378d90f-2090-4e24-aee5-fddf725ebf9c.png"
               alt="Белоснежка"
