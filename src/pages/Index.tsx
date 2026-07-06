@@ -25,15 +25,7 @@ const services = [
   { icon: 'Clock', title: 'Срочный заказ', desc: 'Экспресс-стирка за несколько часов, когда нужно быстро.' },
 ];
 
-const prices = [
-  { name: 'Стирка белья, до 4 кг', price: '900 ₽' },
-  { name: 'Стирка белья, свыше 4 кг', price: '225 ₽/кг' },
-  { name: 'Стирка с крахмалом, до 4 кг', price: '1200 ₽' },
-  { name: 'Стирка с крахмалом, свыше 4 кг', price: '300 ₽/кг' },
-  { name: 'Гардины, тюль, шторы, 1 кг', price: '650 ₽' },
-  { name: 'Спецодежда без глажки, 1 кг', price: '300 ₽' },
-  { name: 'Спецодежда с глажкой, 1 кг', price: '550 ₽' },
-];
+
 
 const reviews = [
   { name: 'Мария Л.', role: 'Постоянный клиент', text: 'Бельё возвращают идеально чистым и приятно пахнущим. Доставка всегда вовремя!' },
@@ -230,20 +222,79 @@ export default function Index() {
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">Прозрачные тарифы без скрытых платежей</p>
         </div>
-        <div className="max-w-2xl mx-auto rounded-3xl border border-border overflow-hidden bg-white">
-          {prices.map((p, i) => (
-            <div
-              key={p.name}
-              className={`flex items-center justify-between px-6 md:px-8 py-5 ${
-                i !== prices.length - 1 ? 'border-b border-border' : ''
-              }`}
-            >
-              <span className="text-secondary-foreground font-medium">{p.name}</span>
-              <span className="font-display font-bold text-primary text-lg">{p.price}</span>
-            </div>
-          ))}
+
+        <div className="max-w-3xl mx-auto">
+          <h3 className="text-center font-display font-bold text-lg md:text-xl text-primary mb-4">
+            Прейскурант на стирку белья, гардин, тюль и штор
+          </h3>
+          <table className="w-full border-collapse border-2 border-secondary-foreground text-sm md:text-base">
+            <thead>
+              <tr>
+                <th className="border-2 border-secondary-foreground px-3 py-2 w-14 text-secondary-foreground">№</th>
+                <th className="border-2 border-secondary-foreground px-3 py-2 text-left text-secondary-foreground" colSpan={2}>
+                  Наименование изделий
+                </th>
+                <th className="border-2 border-secondary-foreground px-3 py-2 w-32 text-secondary-foreground">Цена</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-medium" rowSpan={2}>1</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 font-medium" rowSpan={2}>Стирка белья:</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2">до 4 кг – (независимо от массы сданного белья)</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-bold text-primary">900 руб.</td>
+              </tr>
+              <tr>
+                <td className="border-2 border-secondary-foreground px-3 py-2">свыше 4 кг</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-bold text-primary">225 руб. за 1 кг</td>
+              </tr>
+              <tr>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-medium" rowSpan={2}>2</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 font-medium" rowSpan={2}>Стирка белья с добавлением крахмала:</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2">до 4 кг – (независимо от массы сданного белья)</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-bold text-primary">1200 руб.</td>
+              </tr>
+              <tr>
+                <td className="border-2 border-secondary-foreground px-3 py-2">свыше 4 кг</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-bold text-primary">300 руб. за 1 кг</td>
+              </tr>
+              <tr>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-medium">3</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 font-medium" colSpan={2}>Гардины, тюль, шторы</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-bold text-primary">650 руб. за 1 кг</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <p className="text-center font-display font-bold text-secondary-foreground mt-6 text-lg">
+
+        <div className="max-w-3xl mx-auto mt-14">
+          <h3 className="text-center font-display font-bold text-lg md:text-xl text-primary mb-4">
+            Прейскурант на услуги прачечной для спецодежды
+          </h3>
+          <table className="w-full border-collapse border-2 border-secondary-foreground text-sm md:text-base">
+            <thead>
+              <tr>
+                <th className="border-2 border-secondary-foreground px-3 py-2 w-14 text-secondary-foreground">№</th>
+                <th className="border-2 border-secondary-foreground px-3 py-2 text-left text-secondary-foreground">Наименование изделий</th>
+                <th className="border-2 border-secondary-foreground px-3 py-2 w-32 text-secondary-foreground">Цена(руб)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-medium">1</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 font-medium">Спец. одежда за 1кг (без глажки)</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-bold text-primary">300</td>
+              </tr>
+              <tr>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-medium">1</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 font-medium">Спец. одежда за 1кг (с глажкой)</td>
+                <td className="border-2 border-secondary-foreground px-3 py-2 text-center font-bold text-primary">550</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="text-center font-display font-bold text-secondary-foreground mt-10 text-lg">
           Надбавка за сложность + 30%
         </p>
         <p className="text-center text-muted-foreground mt-2">
